@@ -2,9 +2,11 @@ const path = require("path");
 
 require("dotenv").config();
 
-const {
+/*const {
   DATABASE_URL = "postgres://dev_bj4i_user:jecuANIFXFDoNeW7lINdkkgvo2rrVFq5@dpg-cqjvksggph6c739fcc3g-a.ohio-postgres.render.com/dev_bj4i?ssl=true",
-} = process.env;
+} = process.env;*/
+
+const { DATABASE_URL } = process.env;
 
 module.exports = {
   development: {
