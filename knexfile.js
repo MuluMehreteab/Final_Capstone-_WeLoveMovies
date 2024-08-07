@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 const path = require("path");
 
-require("dotenv").config();
+console.log(process.env.DEVELOPMENT_DATABASE_URL);
 
 const {
   NODE_ENV = "development",
@@ -23,9 +25,6 @@ module.exports = {
     seeds: {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
-    ssl: {
-      rejectUnauthorized: false // This will allow connections without requiring SSL certificates to be valid.
-    }
   },
 
   production: {
@@ -38,9 +37,6 @@ module.exports = {
     seeds: {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
-    ssl: {
-      rejectUnauthorized: false // This will allow connections without requiring SSL certificates to be valid.
-    }
   },
 
   test: {
